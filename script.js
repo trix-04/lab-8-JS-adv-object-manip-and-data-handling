@@ -4,8 +4,10 @@ let student = {
     enrolled: true,
     courses: [ "CPAN134", "PSY230", "CPAN116", "SCIE223" ],
     display: function () {
-        console.log("Basic Student Info: " + "\nName: " + this.name + "\nAge: " + this.age + "\nEnrolled: " + this.enrolled + "\nCourses: " + this.courses.join(", "));
-        
+        let studentInfoDisplay = ("Basic Student Info: " + "\nName: " + this.name + "\nAge: " + this.age + "\nEnrolled: " + this.enrolled + "\nCourses: " + this.courses.join(", "));
+        console.log(studentInfoDisplay);
+        return studentInfoDisplay;
+
     }
 }
     
@@ -15,8 +17,18 @@ let student = {
     //let jsonString = JSON.stringify(student);
     //console.log(jsonString);
 
-    student.display = student.display.toString();
+    student.display = student.display();
     const myJSON = JSON.stringify(student);
     console.log(myJSON);
+
+    // let json = JSON.stringify(student, function(key, value) {
+    //     if (typeof value === 'function') {
+    //         return value.toString();
+    //     } else {
+    //         return value;
+    //     }
+    // })
+
+    // console.log("final result", json); 
     
     
