@@ -14,10 +14,13 @@ let student = {
     console.log(`The student's name is ${student.name} and they are ${student.age} years old`);
     student.display();
 
-
+    console.log("\nCaching display: ")
     student.display = student.display();
     const myJSON = JSON.stringify(student);
     console.log(myJSON);
 
+    let jsonObj = JSON.parse(myJSON);
+    console.log("\nThe output of converting the JSON string back into a JavaScript object yields... ", jsonObj);
+    
     
     
