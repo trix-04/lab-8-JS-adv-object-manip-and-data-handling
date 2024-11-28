@@ -11,5 +11,12 @@ let student = {
     
     console.log(`The student's name is ${student.name} and they are ${student.age} years old`);
     student.display();
+
+    //let jsonString = JSON.stringify(student);
+    //console.log(jsonString);
+
+    student.display = student.display.toString();
+    const myJSON = JSON.stringify(student);
+    console.log(myJSON);
     
     
