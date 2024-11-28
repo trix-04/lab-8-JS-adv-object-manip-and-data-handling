@@ -4,7 +4,7 @@ let student = {
     enrolled: true,
     courses: [ "CPAN134", "PSY230", "CPAN116", "SCIE223" ],
     display: function () {
-        console.log("Basic Student Info: " + "\nName: " + this.name + "\nAge: " + this.age + "\nEnrolled: " + this.enrolled + "\nCourses: " + this.courses);
+        console.log("Basic Student Info: " + "\nName: " + this.name + "\nAge: " + this.age + "\nEnrolled: " + this.enrolled + "\nCourses: " + this.courses.join(", "));
         
     }
 }
