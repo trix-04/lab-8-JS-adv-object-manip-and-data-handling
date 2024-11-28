@@ -3,10 +3,9 @@ let student = {
     age: 27 ,
     enrolled: true,
     courses: [ "CPAN134", "PSY230", "CPAN116", "SCIE223" ],
-    display: () => {
-        let studentInfo = `Basic Student Info: \nName: ${this.name}\nAge: ${this.age}\nEnrolled: ${this.enrolled}\nCourses: ${this.courses}`
-        console.log(studentInfo);
-        return studentInfo;
+    display: function () {
+        console.log("Basic Student Info: " + "\nName: " + this.name + "\nAge: " + this.age + "\nEnrolled: " + this.enrolled + "\nCourses: " + this.courses);
+        
     }
 }
     
