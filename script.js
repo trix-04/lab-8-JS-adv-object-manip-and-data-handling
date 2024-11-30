@@ -8,7 +8,14 @@ let student = {
         let studentInfoDisplay = ("Basic Student Info: " + "\nName: " + this.name + "\nAge: " + this.age + "\nEnrolled: " + this.enrolled + "\nCourses: " + this.courses.join(", "));
         console.log(studentInfoDisplay);
         return studentInfoDisplay;
+    },
 
+    addCourse: function(newCourse) {
+        this.courses.push(newCourse);
+    },
+
+    getTotalCourses: function () {
+        return this.courses.length;
     }
 }
     
@@ -42,4 +49,11 @@ let student = {
     const newCourses =["MAT101", "BIO202"];
     const combinedCourses = [...student.courses, ...newCourses];
     console.log("Combined courses: ", combinedCourses);
+
+    //Part 5:
+    student.addCourse("WRIT120");
+    console.log("Updated courses after adding a new course: ", student.courses);
+
+    const totalCourses = student.getTotalCourses();
+    console.log("Total number of courses: ", totalCourses);
     
