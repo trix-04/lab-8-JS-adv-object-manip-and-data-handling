@@ -23,7 +23,7 @@ let student = {
     student.display();
 
     //Part 2:
-    console.log("\nCaching display: ")
+    console.log("\nCaching 'display' method: ")
     let cachedDisplay = student.display();
     const myJSON = JSON.stringify(student);
     console.log(myJSON);
