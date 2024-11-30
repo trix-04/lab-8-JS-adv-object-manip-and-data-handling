@@ -57,3 +57,8 @@ let student = {
     const totalCourses = student.getTotalCourses();
     console.log("Total number of courses: ", totalCourses);
     
+    //Part 6: Bonus
+    const totalScore = scores.reduce((sum, currentScore) => sum + currentScore, 0);
+    const averageScore = totalScore / scores.length;
+
+    console.log("Average score using the reduce method: ", averageScore);
