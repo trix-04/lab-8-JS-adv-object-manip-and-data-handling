@@ -33,5 +33,13 @@ let student = {
     const [score1, score2] = scores;
     console.log("First score: ", score1);
     console.log("Second score: ", score2);
+
+    //Part 4:
+    const clonedStudent = {...student };
+    clonedStudent.graduationYear = 2025;
+    console.log("Cloned student with new property: ", clonedStudent);
     
+    const newCourses =["MAT101", "BIO202"];
+    const combinedCourses = [...student.courses, ...newCourses];
+    console.log("Combined courses: ", combinedCourses);
     
